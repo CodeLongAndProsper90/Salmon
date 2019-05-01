@@ -63,4 +63,3 @@ def os():
     ver = repo.readline()
     
   console()
-
