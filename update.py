@@ -1,9 +1,8 @@
 def os():
   from time import sleep, time
-  import update
-  verson = '0.2.0'
-  commands = ['exit', 'time', 'arch', 'help','man', 'version', 'nano', 'pi', 'copy filesys']
-  command = input("user@salmonOs ~$")
+  from patch import update
+  commands = ['exit','time' , 'arch', 'help','man', 'version', 'nano', 'pi', 'copy filesys' , 'update']
+  command = input('Scott' +"@salmonOs ~$")
   def console():
     def copy(image, file):
       os = open(file, 'w')
@@ -23,21 +22,22 @@ def os():
         print("Exiting trinket.io interface")
         exit()
       elif command == commands[1]:
-        print(time())
-      elif command  == commands[2]:
-        error()
+        print("Salmon has encountered an error and needs to restart.")
       elif command == commands[3]:
         print("Salmon Os commands")
         print(commands)
       elif command == commands[4]:
         man()
       elif command == commands[5]:
-        print(verson)
+        version = 0.26
+        print(version)
       elif command == commands[7]:
         print("3.1415265358979232846264338327950288419716939937510582097494450781640628620")
       elif command == commands[8]:
         file = input('What file to copy to?')
         copy('OS.py', file)
+      elif command == commands[9]:
+        update()
     if command not in commands:
       print("Bash: command " + command +" not found")
     def man():
@@ -45,8 +45,7 @@ def os():
       if page in commands:
         if page == commands[0]:
           print("exit Salmon OS")
-        elif page == commands[1]:
-          print("Returns the number of seconds from the Epoch")
+        #elif page == commands[1]:
         elif page == commands[2]: 
           print("Returns the system archecture")
         elif page == commands[3]:
@@ -57,9 +56,6 @@ def os():
           print("Prints the Current Salmon verson")
         elif page == commands[6]:
           print("Salmon Os file editor")
-  def check():
-    pass
-    repo = open("version.txt", 'r')
-    ver = repo.readline()
-    
+
   console()
+
