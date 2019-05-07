@@ -1,5 +1,6 @@
-lfrom time import sleep
+from time import sleep
 print("Use 'help' for commands")
+user = input("Username?")
 try:
     from kernel import os
     print('Loading Salmon OS kernel ')
@@ -33,4 +34,4 @@ except:
       
 
 while True:
-    os()
+    os(user)
