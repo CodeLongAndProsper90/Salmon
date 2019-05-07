@@ -1,4 +1,4 @@
-def os(user):
+def os(user, version):
     from time import sleep
     from os import uname
     mac = []
@@ -57,7 +57,6 @@ def os(user):
           elif command == commands[3]:
             man()
           elif command == commands[4]:
-            version = 0.30
             print(version)
           elif command == commands[5]:
             print("3.1415265358979232846264338327950288419716939937510582097494450781640628620")
@@ -81,5 +80,4 @@ def os(user):
         print("Salmon Shell Emulator Protocol: command " + command +" not found")
 
     console()
-
 
