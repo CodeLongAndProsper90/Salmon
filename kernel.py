@@ -1,15 +1,13 @@
-def os():
+def os(user):
     from time import sleep
     from os import uname
-    platform = []
-    platform = uname()
-    op = platform[0]
-    username = platform[1]
-    arch = platform[4]
+    mac = []
+    mac = uname()
+    op = mac[0]
+    username = mac[1]
+    rea = mac[2]
+    arch = mac[4]
 
-    #Insert your name down here |
-    #          V------------------
-    user = 'Scott'
     commands =['exit', 'time', 'help', 'man', 'version' ,'pi', 'halt', 'arch','github', 'credits']
     command = input(user +"@salmonOs ~$")
     def console():
@@ -74,7 +72,7 @@ def os():
             sleep(0.75)
             exit()
           elif command == commands[7]:
-            print('OS: ' + op + '; User: ' + username  + '; Arch: ' + arch)
+            print('OS: ' + op + '; User: ' + username  + '; Arch: ' + arch + " Realease: " + rea)
           elif command == commands[8]:
             print("https://github.com/CodeLongAndProsper90/Salmon")
           elif command == commands[9]:
@@ -83,5 +81,4 @@ def os():
         print("Salmon Shell Emulator Protocol: command " + command +" not found")
 
     console()
-
 
