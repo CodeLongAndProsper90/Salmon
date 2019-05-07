@@ -1,7 +1,7 @@
-from time import sleep
+lfrom time import sleep
 print("Use 'help' for commands")
 try:
-    from OS import os
+    from kernel import os
     print('Loading Salmon OS kernel ')
     sleep(0.75)
     sleep(0.5)
