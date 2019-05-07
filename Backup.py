@@ -8,12 +8,15 @@ def os():
     arch = platform[4]
 
     #Insert your name down here |
-    #          V------------------
+    #          V-----------------
     user = 'Scott'
-    commands =['exit', 'time', 'help', 'man', 'version' ,'pi', 'halt', 'arch',]
+    commands =['exit', 'time', 'help', 'man', 'version' ,'pi', 'halt', 'arch','github', 'credits', 'num of commands']
     command = input(user +"@salmonOs ~$")
     def console():
-        def man():
+      def credits():
+        print("Developed by ttocs")
+        print("Realsed by ttocs")
+      def man():
           page = input("What command to look up?")
           if page in commands:
             if page == commands[0]:
@@ -32,10 +35,10 @@ def os():
               print('Use this command to force a system halt')
             elif page == commands[7]:
               print("Gives you info about the system Salmon os is running on.")
-        def error(message, number):
+      def error(message, number):
             
-          print("ERRORNO " + number + ':' + message)
-        if command in commands:
+        print("ERRORNO " + number + ':' + message)
+      if command in commands:
           if command == commands[0]:
             print('stopping Salmon Kernel')
             sleep(0.5)
@@ -72,7 +75,16 @@ def os():
             exit()
           elif command == commands[7]:
             print('OS: ' + op + '; User: ' + username  + '; Arch: ' + arch)
-        if command not in commands:
-          print("Salmon Shell Emulator Protocal: command " + command +" not found")
+          elif command == commands[8]:
+            print("https://github.com/CodeLongAndProsper90/Salmon")
+          elif command == commands[9]:
+            credits()
+          elif command == commands[10]
+          cmd = 0
+          for command in commands:
+              cmd = cmd + 1
+      if command not in commands:
+        print("Salmon Shell Emulator Protocol: command " + command +" not found")
 
     console()
+
