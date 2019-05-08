@@ -1,12 +1,13 @@
 from time import sleep
 login = False
-version = '0.5.1'
+sudo = False
+version = '0.5.fish'
 print("Salmon OS running Cod firmware with penguins")
 print("Use 'help' for commands")
 user = input("Username?")
-users = ['scott', 'crash']
+users = ['codelongandprosper', 'crash', 'icey']
 user = user.lower()
-passwords = ['ktel2345', 'Fish']
+passwords = ['ktel2345', 'Fish', 'abla']
 passwords[0] = '8t8mph'
 passwords[1] = 'evil penguin minions'
 if user in users:
@@ -14,6 +15,7 @@ if user in users:
   if user == users[0]:
     if password == passwords[1]:
       login = True
+      sudo = True
     else:
       login == False
       exit()
@@ -23,9 +25,15 @@ if user in users:
     else:
       login = False
       exit()
+  if user == users[2]:
+    if password == passwords[2]:
+      login = True
+    else:
+      login = False
+      exit()
 else:
   login = False
-  print("You are not in the list of Comrads!")
+  print("You are not in the list of Comrades!")
   exit()
 try:
     from kernel import os
@@ -60,4 +68,5 @@ except:
       
 
 while login != False:
+    os(user, version, sudo)
     os(user, version)
