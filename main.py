@@ -1,11 +1,14 @@
 from time import sleep
 login = False
-version = '0.4.6'
+version = '0.5.1'
+print("Salmon OS running Cod firmware with penguins")
 print("Use 'help' for commands")
 user = input("Username?")
 users = ['scott', 'crash']
 user = user.lower()
-passwords = ['8t8mph', 'Fish']
+passwords = ['ktel2345', 'Fish']
+passwords[0] = '8t8mph'
+passwords[1] = 'evil penguin minions'
 if user in users:
   password = input('Password?')
   if user == users[0]:
@@ -22,7 +25,7 @@ if user in users:
       exit()
 else:
   login = False
-  print("You are not in the list of Comrads of Salmon OS")
+  print("You are not in the list of Comrads!")
   exit()
 try:
     from kernel import os
