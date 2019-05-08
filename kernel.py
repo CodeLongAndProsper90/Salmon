@@ -7,6 +7,7 @@ def os(user, version):
     username = mac[1]
     rea = mac[2]
     arch = mac[4]
+    ver = mac[3]
 
     commands =['exit', 'time', 'help', 'man', 'version' ,'pi', 'halt', 'arch','github', 'credits']
     command = input(user +"@salmonOs ~$")
@@ -69,9 +70,12 @@ def os(user, version):
             sleep(0.25)
             print("Complete!")
             sleep(0.75)
+            print("Dismissing penguins")
+            sleep(1)
+            print("Complete!")
             exit()
           elif command == commands[7]:
-            print('OS: ' + op + '; User: ' + username  + '; Arch: ' + arch + " Realease: " + rea)
+            print('OS: ' + op + '; User: ' + username  + '; Arch: ' + arch + " Release: " + rea + " Version: " + ver)
           elif command == commands[8]:
             print("https://github.com/CodeLongAndProsper90/Salmon")
           elif command == commands[9]:
